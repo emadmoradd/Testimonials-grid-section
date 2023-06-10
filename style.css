@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.7;
+  font-size: 13px;
+  background: hsl(210, 46%, 95%);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+header {
+  display: none;
+}
+
+.testimonials {
+  max-width: 1440px;
+  margin: 100px auto;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 30px;
+}
+
+.card {
+  background: hsl(0, 0%, 100%);
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.info img {
+  width: 40px;
+  height: 40px;
+  border: 2px solid #996ed9;
+  margin-right: 10px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+h2 {
+  font-size: 15px;
+}
+
+.info p {
+  opacity: 50%;
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  line-height: 1.3;
+  margin-bottom: 20px;
+}
+
+.text {
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.4;
+  opacity: 70%;
+}
+
+.card-purple {
+  background-color: hsl(263, 55%, 52%);
+  color: hsl(0, 0%, 100%);
+  background-image: url('images/bg-pattern-quotation.svg');
+  background-repeat: no-repeat;
+  background-position: top 10px right 100px;
+}
+
+.card-gray-blue {
+  background-color: hsl(217, 19%, 35%);
+  color: hsl(0, 0%, 100%);
+}
+
+.card-black-blue {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+}
+
+.card:nth-of-type(1) {
+  grid-column: 1 / 3;
+}
+
+.card:nth-of-type(4) {
+  grid-column: 2 / 4;
+}
+
+.card:nth-of-type(5) {
+  grid-column: 4 / 5;
+  grid-row: 1 / 3;
+}
+
+footer {
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    grid-template-columns: 1fr;
+  }
+  .card:nth-of-type(1) {
+    grid-column: 1;
+  }
+
+  .card:nth-of-type(4) {
+    grid-column: 1;
+  }
+
+  .card:nth-of-type(5) {
+    grid-column: 1;
+    grid-row: 5;
+  }
+}
